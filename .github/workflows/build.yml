@@ -71,7 +71,8 @@ jobs:
         - name: Run GatorGrader with GatorGrade
           if: always()
           run:  |
-           pipx install gatorgrade
+           # pipx install gatorgrade
+           pipx install gatorgrade==0.5.0
            pipx list
            cd exam
            gatorgrade --report env md GITHUB_STEP_SUMMARY
